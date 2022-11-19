@@ -45,3 +45,14 @@ elif emotion == 2:
     t.pendown()
     t.setheading(120)
     t.circle(70, 120)
+
+elif emotion == 4:
+    t.penup()
+    t.goto(0, 30)
+    t.pendown()
+
+    t.begin_fill()
+    t.fillcolor('black')
+    t.circle(30)
+    t.end_fill()
+    t.penup()
