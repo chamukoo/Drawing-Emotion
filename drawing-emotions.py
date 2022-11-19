@@ -2,83 +2,126 @@
 
 import turtle
 
-print("========== EMOTIONS ==========")
-print("\t1 --> Happy")
-print("\t2 --> Sad")
-print("\t3 --> Angry")
-print("\t4 --> Surprised")
-print("")
-emotion = int(input("How are you feeling today? "))
+while True:
+    print("========== EMOTIONS ==========")
+    print("\n\t1 --> Angry")
+    print("\t2 --> Flushed")
+    print("\t3 --> Happy")
+    print("\t4 --> Sad")
+    print("\t5 --> Surprised")
+    emotion = int(input("\nHow are you feeling today? "))
 
-s = turtle.Screen()
-t = turtle.Turtle(shape='turtle')
-t.color('black','yellow')
-t.pensize(5)
+    s = turtle.Screen()
+    t = turtle.Turtle(shape='turtle')
+    t.color('black','yellow')
+    t.pensize(5)
 
-if emotion == 3:
-    t.color('black', 'red')
-    t.begin_fill()
-    t.circle(100)
-    t.end_fill()
-    t.penup()
-
-    # left eye
-    t.goto(-30, 135)
-    t.pendown()
-    t.dot(20)
-    t.penup()
-
-    # right eye
-    t.goto(30, 135)
-    t.pendown()
-    t.dot(20)
-    t.penup()
-
-    #mouth
-    t.goto(60, 60)
-    t.pendown()
-    t.setheading(120)
-    t.circle(70, 120)
-
-if emotion in (1,2,4):
-    t.begin_fill()
-    t.circle(100)
-    t.end_fill()
-    t.penup()
-
-    t.color('black', 'blue')
-    # left eye
-    t.goto(-30, 135)
-    t.pendown()
-    t.dot(20)
-    t.penup()
-
-    # right eye
-    t.goto(30, 135)
-    t.pendown()
-    t.dot(20)
-    t.penup()
-
-    # mouth
     if emotion == 1:
-        t.goto(-60, 60)
-        t.pendown()
-        t.setheading(-60)
-        t.circle(70, 120)
+        t.color('black', 'red')
+        t.begin_fill()
+        t.circle(100)
+        t.end_fill()
+        t.penup()
 
-    elif emotion == 2:
+        # left eye
+        t.goto(-30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        # right eye
+        t.goto(30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        #mouth
         t.goto(60, 60)
         t.pendown()
         t.setheading(120)
         t.circle(70, 120)
 
-    elif emotion == 4:
-        t.penup()
-        t.goto(0, 30)
-        t.pendown()
-
+    elif emotion == 2:
+        t.color('black', 'yellow')
         t.begin_fill()
-        t.fillcolor('black')
-        t.circle(30)
+        t.circle(100)
         t.end_fill()
         t.penup()
+
+        # left eye
+        t.color('black')
+        t.goto(-30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        # right eye
+        t.goto(30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        # left flush
+        t.color('pink')
+        t.goto(-40, 100)
+        t.pendown()
+        t.dot(40)
+        t.penup()
+
+        # right flush
+        t.goto(40, 100)
+        t.pendown()
+        t.dot(40)
+        t.penup()
+
+        #mouth
+        t.color('black')
+        t.goto(-60, 60)
+        t.pendown()
+        t.setheading(-60)
+        t.circle(70, 120)
+
+
+    if emotion in (3,4,5):
+        t.begin_fill()
+        t.circle(100)
+        t.end_fill()
+        t.penup()
+
+        t.color('black', 'blue')
+        # left eye
+        t.goto(-30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        # right eye
+        t.goto(30, 135)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+
+        # mouth
+        if emotion == 1:
+            t.goto(-60, 60)
+            t.pendown()
+            t.setheading(-60)
+            t.circle(70, 120)
+
+        elif emotion == 2:
+            t.goto(60, 60)
+            t.pendown()
+            t.setheading(120)
+            t.circle(70, 120)
+
+        elif emotion == 4:
+            t.penup()
+            t.goto(0, 30)
+            t.pendown()
+
+            t.begin_fill()
+            t.fillcolor('black')
+            t.circle(30)
+            t.end_fill()
+            t.penup()
+    
