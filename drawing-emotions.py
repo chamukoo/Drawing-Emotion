@@ -39,3 +39,9 @@ if emotion == 1:
     t.pendown()
     t.setheading(-60)
     t.circle(70, 120)
+
+elif emotion == 2:
+    t.goto(60, 60)
+    t.pendown()
+    t.setheading(120)
+    t.circle(70, 120)
