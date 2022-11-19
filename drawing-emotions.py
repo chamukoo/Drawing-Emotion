@@ -1,16 +1,26 @@
 # Programmed by: Lee Anne Y. Angeles
 
 import turtle
+
+print("========== EMOTIONS ==========")
+print("\t1 --> Happy")
+print("\t2 --> Sad")
+print("\t3 --> Angry")
+print("\t4 --> Surprised")
+
+emotion = int(input("How are you feeling today? "))
+
 s = turtle.Screen()
 t = turtle.Turtle(shape='turtle')
-t.color('orange','yellow')
+t.color('black','yellow')
+t.pensize(5)
 
 t.begin_fill()
 t.circle(100)
 t.end_fill()
 t.penup()
 
-t.color('black', 'red')
+t.color('black', 'blue')
 # left eye
 t.goto(-30, 135)
 t.pendown()
@@ -24,7 +34,8 @@ t.dot(20)
 t.penup()
 
 # mouth
-t.goto(-60, 60)
-t.pendown()
-t.setheading(-60)
-t.circle(70, 120)
+if emotion == 1:
+    t.goto(-60, 60)
+    t.pendown()
+    t.setheading(-60)
+    t.circle(70, 120)
