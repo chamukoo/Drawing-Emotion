@@ -3,13 +3,29 @@
 import turtle
 
 while True:
-    print("========== EMOTIONS ==========")
+    print("============ EMOTIONS ============")
     print("\n\t1 --> Angry")
     print("\t2 --> Flushed")
     print("\t3 --> Happy")
     print("\t4 --> Sad")
     print("\t5 --> Surprised")
     emotion = int(input("\nHow are you feeling today? "))
+
+    while True:
+        print("\n==================================")
+        again = input("\nDo you want to try again? (y/n) :").lower()
+        if again == 'y':
+            break
+        elif again == 'n':
+            print("\nThank you for using this program!")
+            print("\n==================================")
+            exit()
+        else:
+            print("\nInvalid Input! Try again!")
+            continue
+
+
+
 
     s = turtle.Screen()
     t = turtle.Turtle(shape='turtle')
