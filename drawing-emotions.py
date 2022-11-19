@@ -3,29 +3,13 @@
 import turtle
 
 while True:
-    print("============ EMOTIONS ============")
+    print("\n============ EMOTIONS ============")
     print("\n\t1 --> Angry")
     print("\t2 --> Flushed")
     print("\t3 --> Happy")
     print("\t4 --> Sad")
     print("\t5 --> Surprised")
     emotion = int(input("\nHow are you feeling today? "))
-
-    while True:
-        print("\n==================================")
-        again = input("\nDo you want to try again? (y/n) :").lower()
-        if again == 'y':
-            break
-        elif again == 'n':
-            print("\nThank you for using this program!")
-            print("\n==================================")
-            exit()
-        else:
-            print("\nInvalid Input! Try again!")
-            continue
-
-
-
 
     s = turtle.Screen()
     t = turtle.Turtle(shape='turtle')
@@ -79,13 +63,13 @@ while True:
 
         # left flush
         t.color('pink')
-        t.goto(-40, 100)
+        t.goto(-40, 95)
         t.pendown()
         t.dot(40)
         t.penup()
 
         # right flush
-        t.goto(40, 100)
+        t.goto(40, 95)
         t.pendown()
         t.dot(40)
         t.penup()
@@ -118,26 +102,38 @@ while True:
         t.penup()
 
         # mouth
-        if emotion == 1:
+        if emotion == 3:
             t.goto(-60, 60)
             t.pendown()
             t.setheading(-60)
             t.circle(70, 120)
 
-        elif emotion == 2:
+        elif emotion == 4:
             t.goto(60, 60)
             t.pendown()
             t.setheading(120)
             t.circle(70, 120)
 
-        elif emotion == 4:
+        elif emotion == 5:
             t.penup()
-            t.goto(0, 30)
+            t.goto(0, 40)
             t.pendown()
 
             t.begin_fill()
             t.fillcolor('black')
-            t.circle(30)
+            t.circle(20)
             t.end_fill()
             t.penup()
-    
+
+    while True:
+            print("\n==================================")
+            again = input("\nDo you want to try again? (y/n) :").lower()
+            if again == 'y':
+                break
+            elif again == 'n':
+                print("\nThank you for using this program!")
+                print("\n==================================")
+                exit()
+            else:
+                print("\nInvalid Input! Try again!")
+                continue    
